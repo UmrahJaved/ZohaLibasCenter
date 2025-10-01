@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../css/style.css">	
+ <title>Zoha Libas Accounts</title>
+ </head>
+<body>
+ <div id="header-placeholder"></div>
+ 
+<div class="account-page">
+  <!-- Upload Section -->
+  <div class="upload-section">
+    <h3>Upload Daily Sales Record</h3>
+    <form id="daily_sale_img" class="upload-form">
+      <input type="file" id="imageInput" accept="image/*" multiple>
+      <button type="submit">Upload</button>
+      <img id="preview" src="" alt="Image Preview" style="max-width: 400px; display: none; margin-top: 15px;">
+    </form>
+  </div>
+
+  <!-- Sales Form Section -->
+  <div class="sales-section">
+    <h3>Log Today's Sale</h3>
+    <form id="salesForm">
+      <div class="form-group">
+        <label for="saleDate">Date:</label>
+        <input type="date" id="saleDate" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="itemName">Seller:</label>
+        <input type="text" id="itemName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount (Rs):</label>
+        <input type="number" id="amount" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Payment Mode:</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="paymentMode" value="cash" id="cashMode" required>
+            <span>Cash</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="paymentMode" value="online" id="onlineMode" required>
+            <span>Online</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    
+    <div id="confirmation" style="display:none; margin-top:15px; padding:10px; background:#d4edda; color:#155724; border-radius:4px; text-align:center;">
+      ✓ Sale logged successfully!
+    </div>
+  </div>
+
+  <!-- Ledger Section -->
+  <div class="ledger-section">
+    <h3>Ledger</h3>
+    <div class="iframe-container">
+      <iframe 
+        width="100%" 
+        height="500" 
+        frameborder="0" 
+        scrolling="no"
+        src="https://docs.google.com/spreadsheets/d/1WAU6J_jqnPGca6zQYhDr6Fzkie3oAVu_b1EnmTKv57E/edit?usp=sharing">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
+
